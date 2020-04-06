@@ -75,180 +75,6 @@ body {
     }
     
     
-    .burger {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    color: var(--color-text-primary);
-    
-    }
-    
-    .burger::before, .burger::after {
-    content:'';
-    position: absolute;
-    width: 16px;
-    height: 2px;
-    background-color: currentColor;
-    border-radius: 1px;
-    transition: opacity 0.2s 0.1s, transform 0.2s 0.1s;
-    }
-    
-    .burger::before {
-    top: 4px;
-    right: 0;
-    }
-    
-    .burger::after {
-    bottom: 4px;
-    left: 0;
-    }
-    
-    .burger__middle-line {
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    background-color: #000;
-    border-radius: 1px;
-    top: 50%;
-    transform: translatey(-50%);
-    transition: transform 0.2s 0.1s;
-    }
-    
-    .burger__middle-line::before {
-    content:'';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-text-primary);
-    border-radius: 1px;
-    left:0;
-    transition: transform 0.2s 0.1s;
-    }
-    
-    .burger:hover::before {
-    opacity: 0;
-    transform: translatex(50%);
-    transition-delay: 0;
-    }
-    
-    .burger:hover::after {
-    opacity: 0;
-    transform: translatex(-50%);
-    transition-delay: 0;
-    }
-    
-    .burger:hover .burger__middle-line {
-    transform: translatey(-50%) rotate(-45deg);
-    }
-    
-    .burger:hover .burger__middle-line::before {
-    transform: rotate(-90deg);
-    }
-    
-    
-    .slider-controls {
-    position: absolute;
-    left:32px;
-    top:50%;
-    width:0;
-    display:flex;
-    justify-content:center;
-    transform:rotate(-90deg);
-    
-    }
-    
-    
-    .slider-controls__button{
-    padding: 8px 8px;
-    appearance: none;
-    border:none;
-    font-weight:bold;
-    font-size:var(--text-size-m);
-    font-family:var(--font);
-    background:transparent;
-    }
-    
-    
-    .slider-controls__button_prev{
-    color:var(--color-text-secondary);
-    }
-    
-    
-    .slider-controls__button_next{
-    color:var(--color-text-primary);
-    }
-    
-    .text-subtitle{
-    display:flex;
-    align-items:center;
-    margin-bottom: 20px;
-    font-size: var(--text-size-l);
-    position: relative;
-    color:var(--color-text-secondary);
-    }
-    
-    .text-subtitle::after{
-    content:'';
-    width:200px;
-    height:1px;
-    background:var(--color-text-secondary);
-    display:block;
-    margin-left:8px;
-    }
-    .text-header {
-    margin-top: 0;
-    margin-bottom: 60px;
-    font-size: var(--text-size-2xl);
-    color:var(--color-text-primary);
-    }
-    .button-label {
-    font-size: var(--text-size-m);
-    color:var(--color-text-primary);
-    font-weight:bold;
-    display:flex;
-    align-items:center;
-    }
-    .button-label .button{
-    margin-right: 12px;
-    }
-    
-    .button{
-    appearance:none;
-    box-sizing:border-box;
-    border:none;
-    display:inline-flex;
-    justify-content: center;
-    }
-    
-    .button_form_round {
-    border-radius:99em;
-    }
-    
-    .button_size_s {
-    min-width: 25px;
-    height: 25px;
-    padding: 0 16px;
-    }
-    
-    .button_size_m {
-    min-width: 50px;
-    height: 50px;
-    }
-    
-    .button_size_l {
-    min-width: 64px;
-    height: 64px;
-    }
-    
-    .button_view_primary {
-    background-color:var(--color-control-primary);
-    color:var(--color-text-default);
-    }
-    
-    .button_view_secondary {
-     
-    background-color:var(--color-control-secondary);
-    }
     
     .slider__item{
     display:grid;
@@ -279,7 +105,7 @@ body {
     height: 100%;
     z-index:-1;
     }
-    /* filter: contrast(50); */
+    
     .blob::before, .blob::after {
     content:'';
     position:absolute;
@@ -330,10 +156,8 @@ body {
     }
     
     .card {
-    /* padding: 16% 12%; */
-    padding: 35px 25px;
     width: 100%;
-    /* height: 250px; */
+    height: 250px;
     background-color: var(--color-bg-default);
     box-shadow: 0 10px 20px -5px rgba(0,0,0,0.2);
     animation:
@@ -416,7 +240,7 @@ body {
     .card__chart{
     width:100%;
     height:80px;
-    background-color: #f5f5f5;
+    background-color: #fff;
     }
     hr {
     width:75%;
@@ -425,41 +249,7 @@ body {
     background-color: var(--color-border);
     border:none;
     }
-    .cross {
-    position:relative;
-    width: 30px;
-    height: 30px;
-    color: white;
-    display: flex;
-    align-items: center;
-    }
-    .cross::before, .cross::after {
-    content:'';
-    position: absolute;
-    width: 26px;
-    height: 2px;
-    background-color: currentColor;
-    border-radius: 1px;
-    transition: opacity 0.2s 0.1s, transform 0.2s 0.1s;
-    }
-    .cross::before {
-    transform:rotate(90deg);
-    transition-delay:0.5ms;
-    left:2px;
-    }
-    .cross::after {
-    transform:rotate(180deg);
-    transition-delay:0.5ms;
-    right:2px;
-    }
-    .cross:hover::before {
-    transform:rotate(45deg);
-    left:2px;
-    }
-    .cross:hover::after {
-    transform:rotate(-45deg);
-    right:2px;
-    }
+    
     
     
     @keyframes cardEaseIn {
